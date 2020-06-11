@@ -1,2 +1,2 @@
-ErrorDocument 404 http://www.jackmorrison.xyz/404page.html 
-ErrorDocument 403 http://www.jackmorrison.xyz/403page.html 
+ErrorDocument 404 http://v0.jackmorrison.xyz/404page 
+ErrorDocument 403 http://v0.jackmorrison.xyz/403page 

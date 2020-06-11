@@ -1,250 +1,399 @@
 <!DOCTYPE html>
 <html>
+  <meta name="description" content="Noughts and Crosses Game" />
+  <meta name="keywords" content="Jack, Morrison, Westcliff, Noughts, Crosses" />
+  <meta name="author" content="Jack Morrison" />
+  <meta charset="UTF-8" />
 
-<meta name="description" content="Noughts and Crosses Game">
-<meta name="keywords" content="Jack, Morrison, Westcliff, Noughts, Crosses">
-<meta name="author" content="Jack Morrison">
-<meta charset="UTF-8">
+  <head>
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="logos/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="logos/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="logos/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="logos/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="logos/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="logos/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="logos/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="logos/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="logos/favicon-196x196.png"
+      sizes="196x196"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="logos/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="logos/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="logos/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="logos/favicon-128.png"
+      sizes="128x128"
+    />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="logos/mstile-144x144.png" />
+    <meta
+      name="msapplication-square70x70logo"
+      content="logos/mstile-70x70.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="logos/mstile-150x150.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="logos/mstile-310x150.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="logos/mstile-310x310.png"
+    />
 
-    <head>
+    <title>Noughts and Crosses Game</title>
+    <style>
+      html {
+        overflow-y: scroll;
+      }
 
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-family: comic sans ms;
+        font-size: 70px;
+        color: #ba0f04;
+      }
 
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="logos/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="logos/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="logos/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="logos/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="logos/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="logos/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="logos/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="logos/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="logos/favicon-196x196.png" sizes="196x196" />
-<link rel="icon" type="image/png" href="logos/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="logos/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="logos/favicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="logos/favicon-128.png" sizes="128x128" />
-<meta name="application-name" content="&nbsp;"/>
-<meta name="msapplication-TileColor" content="#FFFFFF" />
-<meta name="msapplication-TileImage" content="logos/mstile-144x144.png" />
-<meta name="msapplication-square70x70logo" content="logos/mstile-70x70.png" />
-<meta name="msapplication-square150x150logo" content="logos/mstile-150x150.png" />
-<meta name="msapplication-wide310x150logo" content="logos/mstile-310x150.png" />
-<meta name="msapplication-square310x310logo" content="logos/mstile-310x310.png" />
+      P {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2.centerHeader {
+        text-align: center;
+      }
 
+      table {
+        margin-left: auto;
+        margin-right: auto;
+        body {
+          text-align: center;
+        }
+      }
 
+      IMG.logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 55px;
+        height: 100px;
+      }
 
-       <title>Noughts and Crosses Game</title> 
-       <style>
-html {
-  overflow-y: scroll;
-}
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 5px;
+        text-align: center;
+      }
+      table#t01 th {
+        background-color: #ba0f04;
+        color: white;
+      }
 
-span{
-    
-display:table-cell;
- vertical-align:middle;
- text-align: center;
- font-family: comic sans ms;
- font-size:70px;
- color:#ba0f04;
-}
+      body {
+        background-color: white;
+      }
 
+      body {
+        padding: 0;
+        margin: 0;
+      }
 
-P { text-align: center }
-h1 { text-align: center }
-h2.centerHeader { text-align: center }
+      #navigation {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: #ffffff;
+        height: 35px;
+        text-align: center;
+        padding-top: 15px;
+        -webkit-box-shadow: 0px 0px 8px 0px #000000;
+        -moz-box-shadow: 0px 0px 8px 0px #000000;
+        box-shadow: 0px 0px 8px 0px #000000;
+        /* Adds the transparent background */
+        background-color: rgba(186, 15, 4, 1);
+        color: rgba(186, 15, 4, 1);
+      }
+      #navigation a {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
 
+      #navigation a:hover {
+        color: #820a02;
+      }
+    </style>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-table {
-    margin-left:auto; 
-    margin-right:auto;
-    body {text-align:center;}
-  }
+      ga("create", "UA-69344812-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </head>
 
-IMG.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 55px; 
-    height:100px}
+  <body style="font-family: 'arial';">
+    <a href="index"
+      ><img
+        class="logo"
+        src="Drawing (3).png"
+        alt="Jack Morrison, Westcliff High School for Boys"
+    /></a>
 
-table, th, td {
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    text-align: center;
-}
-table#t01 th	{
-    background-color:#ba0f04;
-    color: white;
-}
+    <div id="navigation">
+      <a href="index">Home</a>
 
+      <a href="cv">CV</a>
 
-body {background-color:white}
+      <a href="portfolio">Portfolio</a>
 
-body {
-padding: 0;
-margin: 0;
-}
+      <a href="aboutme">About Me</a>
 
-#navigation {
-position: fixed;
-top: 0;
-width: 100%;
-color: #ffffff;
-height: 35px;
-text-align: center;
-padding-top: 15px;
--webkit-box-shadow: 0px 0px 8px 0px #000000;
--moz-box-shadow: 0px 0px 8px 0px #000000;
-box-shadow: 0px 0px 8px 0px #000000;
-/* Adds the transparent background */
-background-color: rgba(186,  15,  4,  1);
-color: rgba(186,  15,  4,  1);
-}
-#navigation a {
-font-size: 14px;
-padding-left: 15px;
-padding-right: 15px;
-color: white;
-text-decoration: none;
-font-weight: bold;
-text-transform: uppercase;
-}
+      <a href="contact">Contact Me</a>
+    </div>
 
+    <h1>Noughts and Crosses Game</h1>
 
-#navigation a:hover {
-color: #820a02;
-} 
+    <div
+      id="board"
+      style="position: absolute; top: 230px; left: 50%; margin-left: -150px;"
+    ></div>
 
-</style>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <div style="position: absolute; top: 530px; width: 100%;">
+      <h2 class="centerHeader">Rules and Instructions</h2>
+      <p>
+        The object of Noughts and Crosses is to get a winning line of three
+        Noughts or three Crosses in either a horizontal, vertical or diagonal
+        row. Each player takes it in turns to place their piece, a nought or a
+        cross, and whoever lines up 3 first wins!<br />If you want to see how
+        the div's are working, you can open the log, which shows which div has
+        been clicked (it can be seen by clicking CTRL+SHIFT+J when using Google
+        Chrome).
+      </p>
+    </div>
+  </body>
 
-  ga('create', 'UA-69344812-1', 'auto');
-  ga('send', 'pageview');
+  <script>
+    items = [
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
+    ];
+    var turn = 0;
+    var turn = 0;
+    var winner = 0;
+    var t = 0;
+    function myFunction(id, row, column) {
+      if (turn == 0 && items[row][column] == "") {
+        console.log(
+          "Player 1 clicked div " +
+            id +
+            " at row " +
+            row +
+            " and at column " +
+            column
+        );
+        items[row][column] = "X";
+        drawBoard();
+        turn++;
+        t++;
+      } else if (turn == 1 && items[row][column] == "") {
+        console.log(
+          "Player 2 clicked div " +
+            id +
+            " at row " +
+            row +
+            " and at column " +
+            column
+        );
+        items[row][column] = "O";
+        drawBoard();
+        turn = 0;
+        t++;
+      }
 
-</script>
+      for (var x = 0; x < 3; x++) {
+        if (
+          items[0][x] == "X" &&
+          items[1][x] == "X" &&
+          items[2][x] == "X" &&
+          winner == 0
+        ) {
+          winner = 1;
+        } else if (
+          items[0][x] == "O" &&
+          items[1][x] == "O" &&
+          items[2][x] == "O" &&
+          winner == 0
+        ) {
+          winner = 2;
+        }
+      }
 
-    </head>
-    
-    <body style='font-family: "arial";'>
-        <a href="home.html"><img class="logo" src="Drawing (3).png" alt="Jack Morrison, Westcliff High School for Boys"></a>
+      for (var x = 0; x < 3; x++) {
+        if (
+          items[x][0] == "X" &&
+          items[x][1] == "X" &&
+          items[x][2] == "X" &&
+          winner == 0
+        ) {
+          winner = 1;
+        } else if (
+          items[x][0] == "O" &&
+          items[x][1] == "O" &&
+          items[x][2] == "O" &&
+          winner == 0
+        ) {
+          winner = 2;
+        }
+      }
 
-<div id="navigation">  
+      if (
+        (items[0][0] == "X" && items[1][1] == "X" && items[2][2] == "X") ||
+        (items[0][2] == "X" && items[1][1] == "X" && items[2][0] == "X")
+      ) {
+        winner = 1;
+      } else if (
+        (items[0][0] == "O" && items[1][1] == "O" && items[2][2] == "O") ||
+        (items[0][2] == "O" && items[1][1] == "O" && items[2][0] == "O")
+      ) {
+        winner = 2;
+      }
 
-    <a href="home.html">Home</a>
-    
-    <a href="cv.html">CV</a>
-    
-    <a href="portfolio.html">Portfolio</a>
-    
-    <a href="aboutme.html">About Me</a>
-    
-    <a href="contact.html">Contact Me</a>
- 
-</div>
- 
-
-    
-<h1>Noughts and Crosses Game</h1>
-
-
-<div id="board" style="position:absolute; top:230px; left: 50%; margin-left: -150px;
-">
-
-</div>
-
-<div style="position:absolute; top:530px; width:100%">
-<h2 class = centerHeader >Rules and Instructions</h2>
-<p>The object of Noughts and Crosses is to get a winning line of three Noughts or three Crosses in either a horizontal, vertical or diagonal row. Each player takes it in turns to place their piece, a nought or a cross, and whoever lines up 3 first wins!<br>If you want to see how the div's are working, you can open the log, which shows which div has been clicked (it can be seen by clicking CTRL+SHIFT+J when using Google Chrome).</p>
-</div>
-
-    </body>
-
-<script>
- items = [["","",""],["","",""],["","",""]]; var turn = 0;
- var turn = 0;
- var winner = 0;
- var t = 0;
-function myFunction(id, row, column) {
-
-
-if(turn == 0 && items[row][column] == ""){
- console.log("Player 1 clicked div "+id+" at row "+row+" and at column "+column);
-items[row][column] = "X";
- drawBoard();
- turn++
- t++;
-} else if(turn == 1 && items[row][column] == ""){
-  console.log("Player 2 clicked div "+id+" at row "+row+" and at column "+column);
- items[row][column] = "O";
- drawBoard();
- turn = 0
- t++;
-}
-
-for(var x = 0; x<3;x++){
- if(items[0][x] == "X" && items[1][x] == "X" && items[2][x] == "X" && winner == 0){
-  winner = 1;
-} else if(items[0][x] == "O" && items[1][x] == "O" && items[2][x] == "O" && winner == 0){
- winner = 2;
-}
-}
-
-for(var x = 0; x<3;x++){
- if(items[x][0] == "X" && items[x][1] == "X" && items[x][2] == "X" && winner == 0){
-  winner = 1;
-} else if(items[x][0] == "O" && items[x][1] == "O" && items[x][2] == "O" && winner == 0){
- winner = 2;
-}
-}
-
-if((items[0][0] == "X" && items[1][1] == "X" && items[2][2] == "X")||(items[0][2] == "X" && items[1][1] == "X" && items[2][0] == "X")){
- winner = 1;
-} else if((items[0][0] == "O" && items[1][1] == "O" && items[2][2] == "O")||(items[0][2] == "O" && items[1][1] == "O" && items[2][0] == "O")){
- winner = 2;
-}
-
-if(winner == 1){
-  console.log("Player 1 has won");
-   alert("Player 1 has won! Click OK to play again.");
-   location.reload();
-}else if(winner == 2){
-  console.log("Player 2 has won");
-   alert("Player 2 has won! Click OK to play again.");
-  location.reload();
-}else if(t==9){
-   console.log("Draw");
-   alert("It was a draw! Click OK to play again.");
-  location.reload();
- }
-
-}
-
-
-function drawBoard(){
-    var width = 100;
-    var height=100;
-    var id = 1;
-    var insert = "";
-    for (var row=0; row<3; row++) {
-          for (var column=0; column<3; column++) {
-            insert= insert + "<div  id=\""+id+"\"  onclick=\"myFunction("+id+","+row+","+column+")\" style=\"display:table;position:absolute;top:"+row*height+"px;left:"+column*width+"px;width:"+width+"px;height:"+height+"px; border: 2px solid #ba0f04;\" ><span> "+items[row][column]+"</span></div>";
-              id++;
-          }
+      if (winner == 1) {
+        console.log("Player 1 has won");
+        alert("Player 1 has won! Click OK to play again.");
+        location.reload();
+      } else if (winner == 2) {
+        console.log("Player 2 has won");
+        alert("Player 2 has won! Click OK to play again.");
+        location.reload();
+      } else if (t == 9) {
+        console.log("Draw");
+        alert("It was a draw! Click OK to play again.");
+        location.reload();
+      }
     }
 
- document.getElementById("board").innerHTML = insert;
-}
+    function drawBoard() {
+      var width = 100;
+      var height = 100;
+      var id = 1;
+      var insert = "";
+      for (var row = 0; row < 3; row++) {
+        for (var column = 0; column < 3; column++) {
+          insert =
+            insert +
+            '<div  id="' +
+            id +
+            '"  onclick="myFunction(' +
+            id +
+            "," +
+            row +
+            "," +
+            column +
+            ')" style="display:table;position:absolute;top:' +
+            row * height +
+            "px;left:" +
+            column * width +
+            "px;width:" +
+            width +
+            "px;height:" +
+            height +
+            'px; border: 2px solid #ba0f04;" ><span> ' +
+            items[row][column] +
+            "</span></div>";
+          id++;
+        }
+      }
 
- window.onload = drawBoard();
-</script>
+      document.getElementById("board").innerHTML = insert;
+    }
 
+    window.onload = drawBoard();
+  </script>
 </html>
-
-
-

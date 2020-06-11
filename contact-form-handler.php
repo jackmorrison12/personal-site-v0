@@ -45,14 +45,14 @@ if( empty($errors))
 	$to = $email_address; 
 	$email_subject = "Thank You for filling out a contact form!";
 	$email_body = "Thank You for filling out a contact form. ".
-	" You submitted the following information:\n\n Name: $name \n\n Email: $email_address \n\n Message: \n $message \n\n Please reply to this email if you would like to contact me any further. I will reply soon. \n\n Regards, \n Jack Morrison \n http://www.jackmorrison.xyz"; 
+	" You submitted the following information:\n\n Name: $name \n\n Email: $email_address \n\n Message: \n $message \n\n Please reply to this email if you would like to contact me any further. I will reply soon. \n\n Regards, \n Jack Morrison \n http://v0.jackmorrison.xyz"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $myemail";
 	
 	mail($to,$email_subject,$email_body,$headers);
 
-	header('Location: contact-form-thank-you.html');
+	header('Location: contact-form-thank-you');
 } 
 ?>
 
@@ -181,19 +181,19 @@ color: #820a02;
     <body style='font-family: "arial";'>
 
 
-        <a href="home.html"><img class="logo" src="Drawing (3).png" alt="Jack Morrison, Westcliff High School for Boys"></a>
+        <a href="index"><img class="logo" src="Drawing (3).png" alt="Jack Morrison, Westcliff High School for Boys"></a>
 
 <div id="navigation">  
 
-    <a href="home.html">Home</a>
+    <a href="index">Home</a>
     
-    <a href="cv.html">CV</a>
+    <a href="cv">CV</a>
     
-    <a href="portfolio.html">Portfolio</a>
+    <a href="portfolio">Portfolio</a>
     
-    <a href="aboutme.html">About Me</a>
+    <a href="aboutme">About Me</a>
     
-    <a href="contact.html">Contact Me</a>
+    <a href="contact">Contact Me</a>
  
 </div>
  
