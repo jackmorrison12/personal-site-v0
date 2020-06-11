@@ -1,0 +1,6 @@
+AuthUserFile "/home/jackmorr/.htpasswds/public_html/storage/passwd"
+Options +Indexes
+IndexOptions +FancyIndexing
+AuthType Basic
+AuthName "Jack Morrison"
+require valid-user
