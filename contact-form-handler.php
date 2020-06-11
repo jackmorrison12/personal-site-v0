@@ -181,11 +181,11 @@ color: #820a02;
     <body style='font-family: "arial";'>
 
 
-        <a href="index"><img class="logo" src="Drawing (3).png" alt="Jack Morrison, Westcliff High School for Boys"></a>
+        <a href="/"><img class="logo" src="Drawing (3).png" alt="Jack Morrison, Westcliff High School for Boys"></a>
 
 <div id="navigation">  
 
-    <a href="index">Home</a>
+    <a href="/">Home</a>
     
     <a href="cv">CV</a>
     
